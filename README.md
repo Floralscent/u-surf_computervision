@@ -23,6 +23,10 @@
 | Antenna (TX/RX) | 4 / 3 | 4 / 3 | 4 / 4 |
 | RAM (kByte) | 1792 | 2048 | 4096 |
 
+
+![radar](./docs/img.png)
+
+
 ### 2. RGB-D to Point Cloud 변환 (d2p Node)
 Isaac Sim에서 출력되는 2D Depth 이미지와 Odometry 데이터를 결합하여 실시간 3D 포인트 클라우드를 생성하는 ROS2 노드를 구현했습니다.
 
