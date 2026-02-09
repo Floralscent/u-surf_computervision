@@ -1,3 +1,8 @@
+### 통합 구동 영상
+nvblox 오픈소스를 활용하여 생성된 고밀도 맵핑 결과물입니다.
+포인트 클라우드 생성 및 매핑의 구동 과정을 담은 영상입니다.
+![Integrated Demo](./docs/result.gif)
+
 # ROS2 & Isaac Sim 기반 3D Perception 파이프라인 구축
 
 본 프로젝트는 UNIST 하계 인턴십 과정 중 수행되었으며, NVIDIA Isaac Sim 환경에서 로봇의 자율 주행 및 맵핑을 위한 고밀도 포인트 클라우드 생성 및 3D Reconstruction 파이프라인 구현을 목표로 합니다.
@@ -37,11 +42,22 @@ Isaac Sim에서 출력되는 2D Depth 이미지와 Odometry 데이터를 결합�
 * Coordinate Transformation: Optical Frame과 ROS2 World Frame 간의 좌표 불일치를 해결하기 위해 4x4 Transformation Matrix를 산출하여 적용했습니다.
 * System Architecture: /jetbot/depth 및 /jetbot/odometry 토픽을 구독하여 /pointcloud_msg를 발행합니다.
 
-![1](./docs/depth2pt.png)
-
-![2](./docs/depth2pt2.png)
-
-![3](./docs/depth2pt3.png)
+<table style="width: 100%; text-align: center;">
+  <tr>
+    <td style="width: 33%; border: none;">
+      <img src="./docs/depth2pt.png" alt="Depth2Pt 1" width="100%"/>
+      <br/><sub>Pinhole Model</sub>
+    </td>
+    <td style="width: 33%; border: none;">
+      <img src="./docs/depth2pt2.png" alt="Depth2Pt 2" width="100%"/>
+      <br/><sub>Coordinate System</sub>
+    </td>
+    <td style="width: 33%; border: none;">
+      <img src="./docs/depth2pt3.png" alt="Depth2Pt 3" width="100%"/>
+      <br/><sub>Transformation Matrix</sub>
+    </td>
+  </tr>
+</table>
 
 ### 3. nvblox 기반 3D Reconstruction
 NVIDIA의 nvblox 오픈소스 라이브러리를 활용하여 GPU 가속 기반의 빠른 공간 매핑 시스템을 구축했습니다.
@@ -75,7 +91,3 @@ Isaac Sim 환경에서 추출한 Depth 데이터를 World Frame 기반의 포인
 ### 2. IMU와 RGBD 카메라 데이터 노드
 ![node](./docs/node_nvblox.png)
 
-### 3. 통합 구동 영상
-nvblox 오픈소스를 활용하여 생성된 고밀도 맵핑 결과물입니다.
-포인트 클라우드 생성 및 매핑의 구동 과정을 담은 영상입니다.
-![Integrated Demo](./docs/result.gif)
