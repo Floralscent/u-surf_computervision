@@ -7,8 +7,8 @@
 * 주요 성과: 
     * mmWave 레이더 하드웨어 사양 분석 및 선정 검토
     * Isaac Sim 데이터를 활용한 RGB-D to Point Cloud 변환 노드(d2p) 구현을 통한 컴퓨터 비전 학습
-    * NVIDIA nvblox를 활용한 실시간 맵핑 프로세스 구축을 통해 라이더와 rgbd 카메라 데이터 이용 실습
-
+    * NVIDIA nvblox[1]를 활용한 실시간 맵핑 프로세스 구축을 통해 라이더와 rgbd 카메라 데이터 이용 실습
+[1]: https://github.com/nvidia-isaac/nvblox
 ---
 
 ## 주요 수행 내용
